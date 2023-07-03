@@ -1,0 +1,96 @@
+/* universal================================ */
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: midnightblue;
+}
+
+/* wrappper==================================== */
+.wrapper{
+    max-width: 1365px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* contaner here================================= */
+#container{
+    display: flex;
+    align-items: center;
+    /* height: 625px; */
+}
+
+/* data ====================================== */
+.data{
+    text-align: center;
+}
+
+.data h1{
+    background-color: #eeeeee;
+    font-size: 50px;
+}
+
+.data h1,
+.dataHead h2,p{
+    margin: 1% 0;
+}
+
+.dataHead h2{
+    font-size: 40px;
+}
+
+.dataFoot{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.dataHead h2,
+.dataFoot h3{
+    padding:10px 0;
+}
+.dataFoot div{
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+
+.dataFoot div:hover{
+    background-color: #eeeeee;
+}
+/* data end here=================== */
+
+/* responsive start here============== */
+
+@media screen and (max-width: 700px) {
+    .data h1{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 570px) {
+    .data h1,
+.dataHead h2{
+        font-size: 30px;
+    }
+    .dataHead img{
+        width: 70%;
+    }
+    .dataFoot{
+        display: block;
+    }
+}
+@media screen and (max-width: 270px) {
+    .data h1,
+    .dataHead h2{
+            font-size: 20px;
+        }
+    .data p{
+        font-size: 15px;
+        overflow-wrap: break-word;
+    }
+
+
+}
+

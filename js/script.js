@@ -1,15 +1,17 @@
 // select id==========================================
 const container = document.querySelector("#container");
+const base_url="https://restcountries.com/v3.1/name/";
 
+var contry_array=["india","china","pakistan","america","canada","africa"];
+const random = Math.floor(Math.random() * contry_array.length); // till the length of country array 
 // http request=================================
 const request = new XMLHttpRequest();
-request.open("GET", "https://restcountries.com/v3.1/name/india");
+request.open("GET", base_url+contry_array[random]);
 request.send();
 
 request.addEventListener("load", function () {
   // coverted json fie to an object
   const [data] = JSON.parse(this.responseText);
-  // console.log(data.maps.);
 
   // inner htm data
   const htmlData = `
@@ -30,10 +32,6 @@ request.addEventListener("load", function () {
         <h3>SUB REGION</h3>
         <p>${data.subregion}</p>
       </div>
-        <div>
-          <h3>CURRENCIES</h3>
-          <p>${data.currencies.INR.symbol}</p>
-        </div>
         <div>
           <h3>AREA</h3>
           <p>${data.area}</p>
